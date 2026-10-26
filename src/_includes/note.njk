@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<article class="reading-note">
+  <a class="back-link" href="/blog/"><span aria-hidden="true">←</span> All reading notes</a>
+  <header class="note-header">
+    <div class="note-tags">{% if example %}<span class="example-label">Example</span>{% endif %}{% for topic in topics %}<span>{{ topic }}</span>{% endfor %}</div>
+    <h1>{{ title }}</h1>
+    <div class="note-meta"><span>Read on <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time></span>{% if updated %}<span>Updated {{ updated | readableDate }}</span>{% endif %}</div>
+    <p class="note-deck">{{ description }}</p>
+  </header>
+  {% if example %}<aside class="example-notice"><strong>An example note.</strong> This page demonstrates the layout and writing structure. It does not summarize an actual paper.</aside>{% endif %}
+  {% if paperTitle %}<section class="paper-details" aria-labelledby="paper-heading"><h2 id="paper-heading">The paper</h2><p class="paper-title">{{ paperTitle }}</p><p>{% if paperAuthors %}{{ paperAuthors }}{% endif %}{% if paperVenue %} · {{ paperVenue }}{% endif %}{% if paperYear %} · {{ paperYear }}{% endif %}</p>{% if paperUrl %}<a class="text-link" href="{{ paperUrl }}">Read the original paper <span aria-hidden="true">↗</span></a>{% endif %}</section>{% endif %}
+  <div class="prose">{{ content | safe }}</div>
+  <footer class="note-end"><span class="end-mark" aria-hidden="true">✳</span><p>Reading is the beginning. Reflection is the work.</p><a class="text-link" href="/blog/">Back to all notes <span aria-hidden="true">↗</span></a></footer>
+</article>

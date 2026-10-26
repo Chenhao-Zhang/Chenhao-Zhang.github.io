@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="840" viewBox="0 0 720 840" role="img" aria-label="Profile photo placeholder">
+  <rect width="720" height="840" fill="#e9e8df"/>
+  <circle cx="540" cy="175" r="240" fill="#dedfd3"/>
+  <path d="M0 680 720 440v400H0Z" fill="#d5d9ca"/>
+  <circle cx="360" cy="320" r="108" fill="#a9b1a1"/>
+  <path d="M155 680c0-142 85-236 205-236s205 94 205 236v50H155Z" fill="#a9b1a1"/>
+  <rect x="228" y="759" width="264" height="39" rx="19.5" fill="#f8f7f3"/>
+  <text x="360" y="784" font-family="Arial,sans-serif" font-size="16" letter-spacing="2" text-anchor="middle" fill="#405647">YOUR PHOTO HERE</text>
+</svg>

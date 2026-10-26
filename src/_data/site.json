@@ -1,0 +1,13 @@
+{
+  "name": "Chenhao Zhang",
+  "description": "Chenhao Zhang — personal academic homepage. Computational neuroscience, NeuroAI, and BCI.",
+  "education": [
+    { "label": "PhD", "institution": "Peking University", "detail": "1st-year PhD student" },
+    { "label": "Undergraduate", "institution": "University of Science and Technology of China", "detail": "Electronic Engineering and Information Science" }
+  ],
+  "researchInterests": ["Computational neuroscience", "NeuroAI", "BCI"],
+  "github": "https://github.com/Chenhao-Zhang",
+  "email": "",
+  "url": "https://chenhao-zhang.github.io",
+  "language": "en"
+}

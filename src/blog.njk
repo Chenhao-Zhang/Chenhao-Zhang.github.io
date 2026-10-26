@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Blog
+section: blog
+permalink: /blog/index.html
+description: Blog posts by Chenhao Zhang.
+---
+<section class="journal-section" aria-label="Blog posts">
+  <div class="journal-toolbar">
+    <h1>Blog <span class="note-count">{{ collections.notes | length }}</span></h1>
+    <div class="journal-controls" hidden data-search-wrap>
+      <div class="archive-select"><label for="archive-year">Year</label><select id="archive-year" aria-controls="reading-notes"><option value="">All years</option>{% for year in collections.notes | archiveYears %}<option value="{{ year }}">{{ year }}</option>{% endfor %}</select></div>
+      <div class="archive-select"><label for="archive-month">Month</label><select id="archive-month" aria-controls="reading-notes"><option value="">All months</option>{% for month in ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] %}<option value="{% if loop.index < 10 %}0{% endif %}{{ loop.index }}">{{ month }}</option>{% endfor %}</select></div>
+      <div class="search-wrap"><label class="sr-only" for="note-search">Search posts</label><input id="note-search" type="search" placeholder="Search posts…" autocomplete="off" aria-controls="reading-notes"></div>
+    </div>
+  </div>
+  <div id="reading-notes">{% set notes = collections.notes %}{% include "note-list.njk" %}</div>
+  <p class="search-status" role="status" aria-live="polite" data-search-status></p>
+  <p class="empty-state" data-no-results hidden>No posts match your search.</p>
+</section>

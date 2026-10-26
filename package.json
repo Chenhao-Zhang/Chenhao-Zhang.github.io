@@ -1,0 +1,13 @@
+{
+  "name": "personal-reading-journal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal academic homepage and Markdown reading journal.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "check": "node scripts/check-site.mjs"
+  },
+  "devDependencies": { "@11ty/eleventy": "3.1.7" }
+}

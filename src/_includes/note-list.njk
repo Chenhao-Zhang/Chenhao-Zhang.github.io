@@ -1,0 +1,15 @@
+<div class="note-list">
+  {% for note in notes %}
+  <article class="note-row" {% if section == 'blog' %}data-note data-year="{{ (note.date | isoDate).slice(0, 4) }}" data-month="{{ (note.date | isoDate).slice(5, 7) }}"{% endif %}>
+    <time datetime="{{ note.date | isoDate }}">{{ note.date | readableDate }}</time>
+    <div class="note-row-content">
+      <div class="note-tags">{% if note.data.example %}<span class="example-label">Example</span>{% endif %}{% for topic in note.data.topics %}<span>{{ topic }}</span>{% endfor %}</div>
+      <h3><a href="{{ note.url }}">{{ note.data.title }}<span class="row-arrow" aria-hidden="true">↗</span></a></h3>
+      <p>{{ note.data.description }}</p>
+      {% if note.data.paperTitle %}<p class="paper-citation">{{ note.data.paperTitle }}{% if note.data.paperYear %} · {{ note.data.paperYear }}{% endif %}</p>{% endif %}
+    </div>
+  </article>
+  {% else %}
+  <p class="empty-state">No posts yet.</p>
+  {% endfor %}
+</div>
